@@ -30,9 +30,10 @@ docker kill <container_name>
 docker inspect --format '{{.State.Pid}}' <container_name>
 kill -9 <process_ID> | docker stop <process_ID | process_name>
 
-# Copy files to/from a container
+# Copy files from host to a container
 docker cp <target_path> <container>:<destiny>
 docker cp .gitignore mongodb:/home/docker/
 
+# Copy files from a container to the host (useful for buils validation)
 docker cp <container>:<target_path> <destiny>
 docker cp mongodb:/home/docker from_mongo_container

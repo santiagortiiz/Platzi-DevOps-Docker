@@ -10,7 +10,7 @@ sudo docker volume prune -f
 docker-compose -f production.yml down --volumes --rmi all
 
 # For Django
-## Remove volumens and images
+## Remove volumes and images
 docker-compose -f production.yml down --volumes --rmi all
 ## Remove Django Migrations
 	sudo find . -path "*/migrations/*.py" -not-name "__init__.py" -delete
